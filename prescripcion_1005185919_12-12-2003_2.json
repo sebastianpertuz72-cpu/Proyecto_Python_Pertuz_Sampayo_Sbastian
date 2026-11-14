@@ -1,0 +1,24 @@
+{
+    "fecha": "12-12-2003",
+    "paciente_id": "1005185919",
+    "medico_id": "93375353",
+    "medico_nombre": "Dr Super",
+    "sintomas": [
+        "No tan enfermo"
+    ],
+    "diagnostico": "maso",
+    "prescripciones": [
+        {
+            "medicamento": "pastillas",
+            "cantidad": 10,
+            "dosis_diaria": "10",
+            "dias_tratamiento": 1
+        },
+        {
+            "medicamento": "Mas pastillas",
+            "cantidad": 100,
+            "dosis_diaria": "2",
+            "dias_tratamiento": 50
+        }
+    ]
+}

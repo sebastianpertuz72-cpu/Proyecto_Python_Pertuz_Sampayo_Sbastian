@@ -1,0 +1,18 @@
+{
+    "fecha": "12-12-1221",
+    "paciente_id": "1005185919",
+    "medico_id": "93375353",
+    "medico_nombre": "Dr Super",
+    "sintomas": [
+        "enfermo"
+    ],
+    "diagnostico": "muy enfermo",
+    "prescripciones": [
+        {
+            "medicamento": "medicina",
+            "cantidad": 8,
+            "dosis_diaria": "1",
+            "dias_tratamiento": 8
+        }
+    ]
+}

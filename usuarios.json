@@ -1,0 +1,22 @@
+[
+    {
+        "Num_Cedula": "0000",
+        "nombres": "Admin",
+        "apellidos": "Administrador",
+        "telefono": "555 000111",
+        "email": "admin@acmeclinic.com",
+        "direccion": "Cl 185 # 26 – 85",
+        "password": "Admin123",
+        "rol": "administrativo"
+    },
+    {
+        "Num_Cedula": "93375353",
+        "nombres": "Dr",
+        "apellidos": "Super",
+        "telefono": 3215498653,
+        "email": "drsuper@super.com",
+        "direccion": "super-landia",
+        "password": "99438394",
+        "rol": "medico"
+    }
+]

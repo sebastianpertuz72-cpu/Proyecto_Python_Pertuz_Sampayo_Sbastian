@@ -1,0 +1,20 @@
+{
+    "fecha": "10-10-2025",
+    "paciente_id": "1005185919",
+    "medico_id": "93375353",
+    "medico_nombre": "Dr Super",
+    "sintomas": [
+        "felicidad",
+        "alegria",
+        "amor"
+    ],
+    "diagnostico": "compra del gta 6",
+    "prescripciones": [
+        {
+            "medicamento": "play",
+            "cantidad": 1,
+            "dosis_diaria": "24",
+            "dias_tratamiento": 365
+        }
+    ]
+}

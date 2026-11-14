@@ -1,0 +1,12 @@
+[
+    {
+        "Num_Cedula": "1005185919",
+        "nombres": "Sebas",
+        "apellidos": "Tian",
+        "telefono": "3215487985",
+        "email": "prueba@prueba.com",
+        "direccion": "mi casa",
+        "genero": "si",
+        "estado_civil": "no"
+    }
+]
