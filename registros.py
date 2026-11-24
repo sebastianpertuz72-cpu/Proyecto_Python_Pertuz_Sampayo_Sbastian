@@ -182,3 +182,39 @@ def diagnosticar(medico):
     nombre_archivo = f"prescripcion_{paciente['Num_Cedula']}_{fecha}_{len(consultas)}.json"
     carga_y_guarda.guardar(nombre_archivo, consulta)
     print(f"\nConsulta guardada. Prescripción generada en: {nombre_archivo}")
+    
+def reporte_medicos(medico):
+    print("\n--- Reporte de medicos ---")            
+    medico = carga_y_guarda.cargar(ARCH_CONSULTAS)
+
+    print("\n" + "=" * 50)
+    print("DATOS DE LOS MEDICOS")
+    print("=" * 50)
+    print(f"Identificación: {medico[('medico_id')]}")
+    print(f"Nombre:         {medico['nombres']} {medico['apellidos']}")
+    print(f"Teléfono:       {medico['telefono']}")
+    print(f"E-mail:         {medico['email']}")
+    print(f"Dirección:      {medico['direccion']}")
+    print(f"Género:         {medico['genero']}")
+    print(f"Estado civil:   {medico['estado_civil']}")
+
+    consultas = [c for c in carga_y_guarda.cargar(ARCH_CONSULTAS) if c["paciente_id"] == medico["Num_Cedula"]]
+
+
+    print("\n" + "=" * 50)
+    print("HISTORIAL DE CONSULTAS")
+    print("=" * 50)
+    if not consultas:
+        print("El paciente no tiene consultas registradas.")
+        return
+
+    for c in consultas:
+        print(f"\nFecha:        {c['fecha']}")
+        print(f"Médico:       {c['medico_nombre']}")
+        print(f"Síntomas:     {', '.join(c['sintomas'])}")
+        print(f"Diagnóstico:  {c['diagnostico']}")
+        print("Medicamentos:")
+        for m in c["prescripciones"]:
+            print(f"  - {m['medicamento']} | cantidad: {m['cantidad']} | "
+                f"dosis: {m['dosis_diaria']} | días: {m['dias_tratamiento']}")
+        print("-" * 50)

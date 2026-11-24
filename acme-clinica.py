@@ -1,3 +1,12 @@
+"""
+Guion Login con admin@acmeclinic.com, primero con una contraseña incorrecta y luego con la correcta.
+Registrar un médico, cerrar sesión y entrar con ese médico. 
+Registrar un paciente y luego intentar registrarlo de nuevo con la misma identificación.
+Intentar diagnosticar a un paciente que no está registrado.
+Diagnosticar al paciente registrado con 2 síntomas y 2 medicamentos, y mostrar el JSON de la prescripción. 
+Cerrar el programa, volver a abrirlo y consultar la historia clínica por identificación (esto comprueba la persistencia).
+"""
+
 import json
 import carga_y_guarda
 import registros
@@ -5,6 +14,7 @@ import registros
 ARCH_USUARIOS = "usuarios.json"
 ARCH_PACIENTES = "pacientes.json"
 ARCH_CONSULTAS = "consultas.json"
+ARCH_MEDICOSCARGA = "reporte_carga_medicos.json"
 
 
 def login():
@@ -30,6 +40,7 @@ def menu(usuario):
         print("2. Registrar paciente")
         print("3. Diagnosticar paciente")
         print("4. Historia clínica")
+        print("5. Reporte de medicos")
         print("0. Salir")
         opcion = input("Opción: ").strip()
         if opcion == "1":
@@ -40,6 +51,8 @@ def menu(usuario):
             registros.diagnosticar(usuario)
         elif opcion == "4":
             registros.historia_clinica()
+        elif opcion == "5":
+            registros.reporte_medicos(usuario)            
         elif opcion == "0":
             print("Hasta pronto.")
             break
